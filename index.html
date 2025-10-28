@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansible Role Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* For Webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2d3748; /* dark-gray */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* gray */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* light-gray */
+        }
+    </style>
+<script>
+    // ===================================================================================
+    //  API KEY CONFIGURATION - PLEASE READ CAREFULLY TO FIX INVALID KEY ERRORS
+    // ===================================================================================
+    // This project runs directly in the browser, so the API key must be provided here.
+    //
+    // IF YOU ARE GETTING AN "API key not valid" ERROR, FOLLOW THESE STEPS EXACTLY:
+    //
+    // 1. GET A NEW KEY IN A NEW PROJECT:
+    //    - Go to: https://aistudio.google.com/app/apikey
+    //    - Click "Create API key in new project". This is important to avoid old configurations.
+    //    - Copy the new key.
+    //
+    // 2. ENABLE THE API FOR THE PROJECT:
+    //    - The key is valid, but the project might not have the Gemini API enabled. THIS IS THE MOST COMMON CAUSE OF THE ERROR.
+    //    - Go to this link, select your NEW project at the top, and click "ENABLE":
+    //    - https://console.cloud.google.com/apis/library/generativelanguage.googleapis.com
+    //
+    // 3. PASTE THE NEW KEY BELOW:
+    //    - Replace the placeholder key with your new key.
+    //
+    // 4. CLEAR YOUR BROWSER CACHE:
+    //    - Do a hard refresh (Cmd+Shift+R or Ctrl+F5) or clear your browser cache to ensure
+    //      the old key is not stored.
+    // ===================================================================================
+    window.process = {
+      env: {
+        API_KEY: 'PASTE_YOUR_NEW_GOOGLE_AI_API_KEY_HERE'
+      }
+    };
+</script>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "jszip": "https://aistudiocdn.com/jszip@3.10.1/dist/jszip.min.js"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

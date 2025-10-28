@@ -1,0 +1,5 @@
+{
+  "name": "General Ansible Role Generator",
+  "description": "A web application that uses AI to generate complete Ansible roles from a natural language description.",
+  "requestFramePermissions": []
+}
